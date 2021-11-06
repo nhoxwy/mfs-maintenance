@@ -20,18 +20,10 @@
             width: auto;
             height: 100vh;
         }
-        @media screen and (max-width: 1024px) {
-            body {
-                height: 100%;
-            }
-            div {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
+        @media screen and (max-width: 768px) {
             img {
                 width: 100%;
-                height: auto;
+                height: 100vh;
             }
         }
     </style>
@@ -39,7 +31,11 @@
 <body>
     <div>
         <a href="https://www.facebook.com/thptndc.thanhxuan">
-          <img src="/mfs-maintenance2.gif">
+            <picture>
+                <source media="(max-width: 768px)" srcset="/mfs-maintenance-mobile.gif">
+                <source srcset="/mfs-maintenance2.gif">
+                <img src="/mfs-maintenance2.gif">
+            </picture>
         </a>
     </div>
 </body>
